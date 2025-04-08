@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napenda Africa Safaris - Your Adventure Awaits!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Lucide font is still used elsewhere, so keep it */
+      @font-face {
+        font-family: 'LucideIcons';
+        src: url(https://cdn.jsdelivr.net/npm/lucide-static@latest/font/Lucide.ttf) format('truetype');
+      }
+      .lucide {
+        font-family: 'LucideIcons';
+        font-size: 1.25rem; /* Adjust size as needed */
+        line-height: 1;
+        vertical-align: middle;
+        margin-right: 0.5rem; /* Space between icon and text */
+        display: inline-block; /* Ensure proper alignment */
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'media',
+        theme: {
+          extend: {
+            colors: {
+              brandOrange: '#C2410C', // Subdued orange (orange-700) - Main theme
+              brandDark: '#111827',   // Tailwind's gray-900 (very dark)
+              // Note: Click orange (#F97316 / orange-500) will be applied directly via class
+            },
+            fontFamily: {
+              sans: ['Open Sans', 'sans-serif'],      // Body font
+              heading: ['Barlow Condensed', 'sans-serif'], // Heading font
+            },
+          }
+        }
+      }
+    </script>
+</head>
+<body class="font-sans bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home">
+                 <img src="images/logo.png"
+                      alt="Napenda Africa Safaris Logo"
+                      class="h-12 w-auto">
+            </a>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none text-brandDark dark:text-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <ul id="desktop-menu" class="hidden md:flex space-x-6 items-center font-sans">
+                <li><a href="#home" class="text-brandDark dark:text-gray-300 hover:text-brandOrange dark:hover:text-brandOrange transition duration-300">Home</a></li>
+                <li><a href="#about" class="text-brandDark dark:text-gray-300 hover:text-brandOrange dark:hover:text-brandOrange transition duration-300">About Us</a></li>
+                <li><a href="#tours" class="text-brandDark dark:text-gray-300 hover:text-brandOrange dark:hover:text-brandOrange transition duration-300">Tours</a></li>
+                <li><a href="#why-us" class="text-brandDark dark:text-gray-300 hover:text-brandOrange dark:hover:text-brandOrange transition duration-300">Why Us?</a></li>
+                <li><a href="#contact" class="text-brandDark dark:text-gray-300 hover:text-brandOrange dark:hover:text-brandOrange transition duration-300">Contact</a></li>
+                <li><a href="#contact" class="bg-brandOrange text-white px-4 py-2 rounded-md hover:bg-orange-800 dark:hover:bg-orange-800 transition duration-300 text-sm font-medium">Enquire Now</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 py-2 absolute w-full shadow-lg transition-colors duration-300 font-sans">
+            <a href="#home" class="block px-6 py-2 text-brandDark dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+            <a href="#about" class="block px-6 py-2 text-brandDark dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About Us</a>
+            <a href="#tours" class="block px-6 py-2 text-brandDark dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Tours</a>
+            <a href="#why-us" class="block px-6 py-2 text-brandDark dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Why Us?</a>
+            <a href="#contact" class="block px-6 py-2 text-brandDark dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+             <a href="#contact" class="block px-6 py-2 bg-brandOrange text-white text-center rounded-md mx-4 my-2 hover:bg-orange-800 dark:hover:bg-orange-800 transition duration-300">Enquire Now</a>
+        </div>
+    </header>
+
+    <section id="home" class="relative text-white py-16 md:py-24 bg-brandDark">
+        <div class="absolute inset-0">
+             <img src="images/hero-image.jpg"
+                  alt="African wildlife silhouettes against an orange sunset"
+                  class="w-full h-full object-cover opacity-40 dark:opacity-30">
+        </div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">Welcome to Napenda Africa Safaris</h1>
+            <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-semibold mb-6">Your Adventure Awaits!</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+                Exit the stress. Hit the pause button. Come on a Kenya safari. Immersing you in the ancient lands, vibrant cultures, and astonishing wildlife of East Africa is our expertise.
+            </p>
+             <a href="#contact" class="bg-brandOrange text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-orange-800 dark:hover:bg-orange-800 transition duration-300 inline-block">
+                Enquire Now for Your Dream Safari
+            </a>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-6 text-center">
+             <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                At Napenda Africa Safaris, established in 2008, we are passionate about providing our clients with unforgettable safari experiences in East Africa. Immersing you in the ancient lands, vibrant cultures, and astonishing wildlife of Kenya, Tanzania, Uganda, and Rwanda is our expertise. Get ready to be transformed and enjoy the world with new eyes. Your ultimate safari adventure is just a call or click away!
+             </p>
+        </div>
+    </section>
+
+    <section id="about" class="py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white text-center mb-10">About Us - Our Passion for Africa</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="images/team.jpg" alt="Napenda Africa Safaris Team Placeholder"
+                         class="rounded-lg shadow-lg w-full h-64 object-cover object-center"> </div>
+                 <div class="text-gray-700 dark:text-gray-300 space-y-3 leading-relaxed">
+                    <p>Napenda Africa Safaris was established and incorporated in the tourism industry in 2008. Founded with a deep love for East Africa, our mission is to share the beauty and wonder of this region with you.</p>
+                    <p>Our team of experienced guides and staff have been in the hospitality industry for many years, dedicated to ensuring your trip is enjoyable, safe, and truly memorable.</p>
+                    <p>We are a small and intimate company that prides itself on offering personalised safari experiences led by enthusiastic experts.</p>
+                    <p>We also believe in sustainable and responsible tourism, working closely with local communities and conservation organisations to protect the fragile environment we call home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tours" class="py-12 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white text-center mb-10">Explore Our East Africa Safari Tours</h2>
+             <p class="text-lg text-gray-700 dark:text-gray-300 text-center max-w-3xl mx-auto mb-8 leading-relaxed">
+                Discover the magic of East Africa with our diverse range of safari adventures. We offer a wide selection of air and road safaris and excursions. Whether you dream of witnessing the Great Migration, encountering elephants beneath Kilimanjaro, or tracking gorillas, we can tailor the perfect itinerary for you.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md dark:shadow-gray-900 border-l-4 border-brandOrange transition-colors duration-300">
+                    <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-3">Game Drives (Big Five)</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Experience thrilling game drives to see the legendary Big Five: lions, elephants, buffalos, leopards, and rhinoceroses in their natural habitat.</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md dark:shadow-gray-900 border-l-4 border-brandOrange transition-colors duration-300">
+                    <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-3">Bird Watching</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Explore diverse habitats teeming with colourful birdlife, perfect for avid bird watchers and nature lovers.</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md dark:shadow-gray-900 border-l-4 border-brandOrange transition-colors duration-300">
+                    <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-3">Hiking & Landscapes</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Embark on scenic hikes to explore the stunning landscapes of East Africa, from mountains to rift valleys.</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md dark:shadow-gray-900 border-l-4 border-brandOrange transition-colors duration-300">
+                    <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-3">Cultural Experiences</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Connect with local communities and learn about their traditions and way of life through immersive cultural visits.</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md dark:shadow-gray-900 border-l-4 border-brandOrange transition-colors duration-300">
+                    <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-3">Tailored Tours</h3>
+                    <p class="text-gray-600 dark:text-gray-300">We offer both group and private tours, catering to solo adventurers, families, and groups of friends, with flexible durations.</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md dark:shadow-gray-900 border-l-4 border-brandOrange transition-colors duration-300">
+                     <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-3">Beach & Bush Combos</h3>
+                     <p class="text-gray-600 dark:text-gray-300">Combine a thrilling Kenya wildlife safari with a relaxing finish at Kenya’s beautiful Diani Beach or Zanzibar.</p>
+                </div>
+            </div>
+
+            <h3 class="font-heading text-2xl font-semibold text-brandDark dark:text-white text-center mb-5 mt-10">Popular Kenya Safari Destinations Include:</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
+                 <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow dark:shadow-gray-900 hover:shadow-lg transition duration-300">
+                    <img src="images/masai-mara.jpg" alt="Masai Mara" class="rounded mb-2 mx-auto w-full h-40 object-cover object-center">
+                    <p class="font-medium text-gray-700 dark:text-gray-200">Masai Mara</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow dark:shadow-gray-900 hover:shadow-lg transition duration-300">
+                    <img src="images/amboseli.jpg" alt="Amboseli" class="rounded mb-2 mx-auto w-full h-40 object-cover object-center">
+                    <p class="font-medium text-gray-700 dark:text-gray-200">Amboseli</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow dark:shadow-gray-900 hover:shadow-lg transition duration-300">
+                    <img src="images/lake-nakuru.jpg" alt="Lake Nakuru" class="rounded mb-2 mx-auto w-full h-40 object-cover object-center">
+                    <p class="font-medium text-gray-700 dark:text-gray-200">Lake Nakuru</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow dark:shadow-gray-900 hover:shadow-lg transition duration-300">
+                    <img src="images/samburu.jpg" alt="Samburu" class="rounded mb-2 mx-auto w-full h-40 object-cover object-center">
+                    <p class="font-medium text-gray-700 dark:text-gray-200">Samburu</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow dark:shadow-gray-900 hover:shadow-lg transition duration-300">
+                    <img src="images/tsavo-east.jpg" alt="Tsavo East" class="rounded mb-2 mx-auto w-full h-40 object-cover object-center">
+                    <p class="font-medium text-gray-700 dark:text-gray-200">Tsavo East</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow dark:shadow-gray-900 hover:shadow-lg transition duration-300">
+                    <img src="images/tsavo-west.jpg" alt="Tsavo West" class="rounded mb-2 mx-auto w-full h-40 object-cover object-center">
+                    <p class="font-medium text-gray-700 dark:text-gray-200">Tsavo West</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow dark:shadow-gray-900 hover:shadow-lg transition duration-300">
+                    <img src="images/tanzania.jpg" alt="Tanzania Safaris" class="rounded mb-2 mx-auto w-full h-40 object-cover object-center">
+                    <p class="font-medium text-gray-700 dark:text-gray-200">Tanzania Safaris</p>
+                </div>
+                 <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow dark:shadow-gray-900 hover:shadow-lg transition duration-300">
+                    <img src="images/zanzibar.jpg" alt="Zanzibar Beach" class="rounded mb-2 mx-auto w-full h-40 object-cover object-center">
+                    <p class="font-medium text-gray-700 dark:text-gray-200">Zanzibar Beach</p>
+                </div>
+                </div>
+             <p class="text-gray-700 dark:text-gray-300 text-center mt-6">We provide a range of accommodation options, from budget camping to luxury lodges and camps, ensuring your comfort and safety.</p>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-12">
+        <div class="container mx-auto px-6">
+             <h2 class="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white text-center mb-10">Why Choose Napenda Africa Safaris?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="text-center p-4">
+                     <span class="lucide text-brandOrange text-4xl mb-3">&#xea5f;</span>
+                     <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-2">Personalised Experiences</h3>
+                     <p class="text-gray-600 dark:text-gray-300">We create custom Kenya safari tours from your wish list, tailoring each adventure to your unique interests.</p>
+                </div>
+                <div class="text-center p-4">
+                     <span class="lucide text-brandOrange text-4xl mb-3">&#xe9d7;</span>
+                     <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-2">Expert Guides</h3>
+                     <p class="text-gray-600 dark:text-gray-300">Our guides bring years of experience, training, excitement, fun, and support to your safari.</p>
+                </div>
+                <div class="text-center p-4">
+                    <span class="lucide text-brandOrange text-4xl mb-3">&#xea17;</span>
+                     <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-2">Flexibility</h3>
+                     <p class="text-gray-600 dark:text-gray-300">We are organised to be fast, flexible, and quick to respond, whether booking months ahead or last minute.</p>
+                </div>
+                <div class="text-center p-4">
+                    <span class="lucide text-brandOrange text-4xl mb-3">&#xe915;</span>
+                     <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-2">Accommodation Choice</h3>
+                     <p class="text-gray-600 dark:text-gray-300">Choose between safari luxury lodges or comfortable tented camps (economy, comfort, or luxury).</p>
+                </div>
+                 <div class="text-center p-4">
+                    <span class="lucide text-brandOrange text-4xl mb-3">&#xe9f4;</span>
+                     <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-2">Commitment to Sustainability</h3>
+                     <p class="text-gray-600 dark:text-gray-300">We follow best practices to protect and improve our fragile environment.</p>
+                </div>
+                 <div class="text-center p-4">
+                    <span class="lucide text-brandOrange text-4xl mb-3">&#xea7a;</span>
+                     <h3 class="font-heading text-xl font-semibold text-brandDark dark:text-white mb-2">Connectivity</h3>
+                     <p class="text-gray-600 dark:text-gray-300">Our safari jeeps have Wi-Fi 75% of the time, and most accommodations offer connectivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-12 bg-brandDark text-gray-200">
+        <div class="container mx-auto px-6">
+             <h2 class="font-heading text-3xl md:text-4xl font-bold text-white text-center mb-10">Ready to Plan Your Unique Safari? Contact Us Today!</h2>
+            <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-8 leading-relaxed">
+                Let us help you find your perfect African safari experience. Our friendly travel advisors are ready to assist you in creating the adventure of a lifetime. Just call, WhatsApp, email us or fill out our online enquiry form!
+            </p>
+             <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-4">
+                    <div>
+                         <h3 class="font-heading text-2xl font-semibold text-white mb-3 border-b border-brandOrange pb-2 inline-block">Head Office</h3>
+                        <p class="flex items-start mb-2">
+                            <span class="lucide text-brandOrange mt-1">&#xe9c1;</span> <span>P.O Box 31403-00600,<br>Nairobi, Kenya</span>
+                        </p>
+                         <p class="flex items-center mb-2">
+                            <span class="lucide text-brandOrange">&#xe9e8;</span>
+                             <a href="tel:+254722738726" class="hover:text-brandOrange transition duration-300">+254 722 738 726</a> /
+                             <a href="tel:+254742105110" class="hover:text-brandOrange transition duration-300 ml-1">+254 742 105 110</a> /
+                             <a href="tel:+254722435213" class="hover:text-brandOrange transition duration-300 ml-1">+254 722 435 213</a>
+                        </p>
+                         <p class="flex items-center mb-2">
+                            <span class="lucide text-brandOrange">&#xe9b3;</span> <a href="mailto:jamesambole@napendaafrica.com" class="hover:text-brandOrange transition duration-300">jamesambole@napendaafrica.com</a>
+                         </p>
+                         <p class="flex items-center mb-2">
+                            <span class="lucide text-brandOrange">&#xe9b3;</span> <a href="mailto:info@napendaafrica.com" class="hover:text-brandOrange transition duration-300">info@napendaafrica.com</a>
+                         </p>
+                        <p class="flex items-center">
+                             <span class="lucide text-brandOrange">&#xe9fe;</span> <a href="http://www.napendaafrica.com" target="_blank" rel="noopener noreferrer" class="hover:text-brandOrange transition duration-300">www.napendaafrica.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-300">
+                    <h3 class="font-heading text-2xl font-semibold text-brandDark dark:text-white mb-5">Send Us an Enquiry</h3>
+                    <form action="#" method="POST">
+                         <div class="mb-3">
+                            <label for="name" class="block text-gray-700 dark:text-gray-300 font-medium mb-1">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brandOrange text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:ring-brandOrange dark:focus:border-brandOrange transition-colors duration-300">
+                        </div>
+                         <div class="mb-3">
+                            <label for="email" class="block text-gray-700 dark:text-gray-300 font-medium mb-1">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brandOrange text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:ring-brandOrange dark:focus:border-brandOrange transition-colors duration-300">
+                        </div>
+                         <div class="mb-3">
+                            <label for="phone" class="block text-gray-700 dark:text-gray-300 font-medium mb-1">Phone (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brandOrange text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:ring-brandOrange dark:focus:border-brandOrange transition-colors duration-300">
+                        </div>
+                         <div class="mb-5">
+                            <label for="message" class="block text-gray-700 dark:text-gray-300 font-medium mb-1">Message / Enquiry Details</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brandOrange text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:ring-brandOrange dark:focus:border-brandOrange transition-colors duration-300"></textarea>
+                        </div>
+                        <div>
+                             <button type="submit" class="w-full bg-brandOrange text-white px-6 py-3 rounded-md font-semibold hover:bg-orange-800 dark:hover:bg-orange-800 transition duration-300">
+                                Submit Enquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 dark:bg-gray-800 py-6 transition-colors duration-300">
+        <div class="container mx-auto px-6 text-center text-gray-600 dark:text-gray-400">
+             <div class="mb-3" id="social-icons-container"> <h4 class="font-heading font-semibold mb-1 text-gray-700 dark:text-gray-300">Follow Us:</h4>
+                 <a href="https://wa.me/254722435213" target="_blank" rel="noopener noreferrer" class="mx-2 inline-block align-middle">
+                     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6 text-white hover:text-orange-500 transition-colors duration-300 social-icon">
+                         <title>WhatsApp</title>
+                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                     </svg>
+                 </a>
+                 <a href="https://www.linkedin.com/napendasaafrica" target="_blank" rel="noopener noreferrer" class="mx-2 inline-block align-middle">
+                     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6 text-white hover:text-orange-500 transition-colors duration-300 social-icon">
+                         <title>LinkedIn</title>
+                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                     </svg>
+                 </a>
+                 <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="mx-2 inline-block align-middle">
+                     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6 text-white hover:text-orange-500 transition-colors duration-300 social-icon">
+                         <title>YouTube</title>
+                         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                     </svg>
+                 </a>
+             </div>
+            <p class="text-sm">&copy; <span id="current-year"></span> Napenda Africa Safaris. All rights reserved.</p>
+            <p class="text-xs mt-1">Website designed with passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- START: Icon Click Handler ---
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all social icon links within the container
+            const socialIcons = document.querySelectorAll('#social-icons-container a');
+
+            socialIcons.forEach(iconLink => {
+                iconLink.addEventListener('click', function(event) {
+                    // Optional: Prevent the link from navigating immediately if needed
+                    // event.preventDefault();
+
+                    // Find the SVG element within the clicked link
+                    const svgIcon = this.querySelector('svg');
+
+                    // Check if the icon is currently orange
+                    const isOrange = svgIcon.classList.contains('text-orange-500');
+
+                    // Remove previous active states from ALL icons first (optional, if only one should be active at a time)
+                    // socialIcons.forEach(link => {
+                    //    const svg = link.querySelector('svg');
+                    //    svg.classList.remove('text-orange-500');
+                    //    svg.classList.add('text-white');
+                    // });
+
+                    // Toggle the color classes on the clicked icon's SVG
+                    if (isOrange) {
+                        // If it's orange, make it white
+                        svgIcon.classList.remove('text-orange-500');
+                        svgIcon.classList.add('text-white');
+                    } else {
+                        // If it's white, make it orange
+                        svgIcon.classList.remove('text-white');
+                        svgIcon.classList.add('text-orange-500'); // Use the bright orange class
+                    }
+
+                    // If you prevented default navigation and want to navigate after a delay, do it here:
+                    // const url = this.href;
+                    // setTimeout(() => { window.open(url, '_blank'); }, 200); // Open in new tab after 200ms
+                });
+            });
+        });
+        // --- END: Icon Click Handler ---
+
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a'); // Get all links in mobile menu
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked (for SPA feel)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
